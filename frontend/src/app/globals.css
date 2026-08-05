@@ -1,0 +1,183 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-space-grotesk);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+:root {
+  /* Light mode - clean, brand foreground doubles as the deep forest tone */
+  --background: #ffffff;
+  --foreground: #03221a;
+
+  --card: #ffffff;
+  --popover: #ffffff;
+  --card-foreground: #03221a;
+  --popover-foreground: #03221a;
+
+  --primary: #129f7a;
+  --primary-foreground: #ffffff;
+
+  --secondary: #eaf6f1;
+  --secondary-foreground: #0b6b52;
+
+  --muted: #f2f7f5;
+  --muted-foreground: #4b6b61;
+
+  --accent: #eaf6f1;
+  --accent-foreground: #0b6b52;
+
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+
+  --border: #dceee7;
+  --input: #ffffff;
+  --ring: #129f7a;
+
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: #000000;
+  --foreground: #f2f7f5;
+
+  --card: #03221a;
+  --popover: #03221a;
+  --card-foreground: #f2f7f5;
+  --popover-foreground: #f2f7f5;
+
+  --primary: #129f7a;
+  --primary-foreground: #03120d;
+
+  --secondary: #0f3527;
+  --secondary-foreground: #f2f7f5;
+
+  --muted: #0c2a1f;
+  --muted-foreground: #7fa69b;
+
+  --accent: #0f3527;
+  --accent-foreground: #4ee0ac;
+
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+
+  --border: #16392c;
+  --input: #0c2a1f;
+  --ring: #129f7a;
+}
+
+/* Apply base styles */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+/* Tabular figures for balances, prices, addresses, countdowns */
+.font-numeric {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Fix container alignment */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+/* Ensure proper border handling */
+* {
+  border-color: var(--border);
+}
+
+/* Fix for layout shifting */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
