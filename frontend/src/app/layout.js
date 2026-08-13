@@ -34,7 +34,7 @@ const miniAppMetadata = JSON.stringify({
       type: "launch_frame",
       name: "Nestora",
       url: "https://www.Nestora.xyz",
-      splashImageUrl: "https://www.Nestora.xyz/favicon.png",
+      splashImageUrl: "https://www.Nestora.xyz/favicon.jpeg",
       splashBackgroundColor: "#000000",
     },
   },
