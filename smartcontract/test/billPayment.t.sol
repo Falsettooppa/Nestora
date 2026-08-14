@@ -19,7 +19,7 @@ contract BillPaymentTest is Test {
         vm.prank(admin);
         billPayment = new BillPayment(admin, treasury);
 
-        token = new ERC20Mock("Botchain Dollar", "cUSD", payer, PAYER_BALANCE);
+        token = new ERC20Mock("Botchain Dollar", "BOT", payer, PAYER_BALANCE);
 
         vm.prank(admin);
         billPayment.setSupportedToken(address(token), true);

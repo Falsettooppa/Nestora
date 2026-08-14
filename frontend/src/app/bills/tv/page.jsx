@@ -92,7 +92,7 @@ export default function TvPage() {
           <SelectContent>
             {packages.map((p) => (
               <SelectItem key={p.label} value={p.label}>
-                {p.label} — {p.amount} cUSD
+                {p.label} — {p.amount} BOT
               </SelectItem>
             ))}
           </SelectContent>

@@ -18,7 +18,7 @@ export function BillFormShell({
   category,
   buildSummary,
   amount,
-  tokenSymbol = "cUSD",
+  tokenSymbol = "BOT",
   children,
 }) {
   const router = useRouter();

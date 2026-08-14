@@ -108,7 +108,7 @@ export default function AirtimePage() {
             <SelectContent>
               {DATA_BUNDLES.map((b) => (
                 <SelectItem key={b.value} value={b.value}>
-                  {b.label} — {b.amount} cUSD
+                  {b.label} — {b.amount} BOT
                 </SelectItem>
               ))}
             </SelectContent>
