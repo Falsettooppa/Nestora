@@ -220,7 +220,7 @@ export default function AccountPage() {
         className="mb-6"
         label="Wallet Balance"
         value={parseFloat(balance).toFixed(4)}
-        valueSuffix="CELO"
+        valueSuffix="Botchain"
         subtext={formatAddress(account)}
         actions={
           <>
