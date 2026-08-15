@@ -161,7 +161,7 @@ The verified testnet deployments include:
 These deployments were used during development and testing before the Mainnet deployment.
 
 How Nestora Works
-                    ┌─────────────────────┐
+                                       ┌─────────────────────┐
                     │        User         │
                     └──────────┬──────────┘
                                │
@@ -376,13 +376,3 @@ They can evolve with it.
 
 Save Together. Achieve Together.
 
-
-### One correction I deliberately made
-
-
-I changed the stack from the previous README to **Next.js 15 + React 19**, because your actual `package.json` confirms:
-
-
-```text
-next: 15.5.21
-react: ^19.0.0
